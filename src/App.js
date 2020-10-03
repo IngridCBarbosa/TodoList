@@ -1,6 +1,9 @@
 import React, {useState,useRef,useEffect} from 'react';
-import  TodoList from './TodoList.js'
+
 import uuidv4 from 'uuid/v4'
+
+import  TodoList from './TodoList.js'
+import Styles from './styles/styles.css';
 
 const LOCAL_STORAGE_KEY = 'todoApp.todos'
 
@@ -42,6 +45,7 @@ function App() {
   
   return (
    <>
+      <Styles />
       <TodoList todos ={todos} toggleTodo={toggleTodo}/>
       <input ref={todoNameRef} type="text" />
       <button onClick={handleAddTodo}>Add Todo</button>
